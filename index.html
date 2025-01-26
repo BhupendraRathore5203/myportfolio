@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/custom.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/tailwind-css.css" />
+
+    <title>Tailwind CSS</title>
+</head>
+
+<body>
+    <header class="sticky top-0 z-50">
+        <nav
+            class="sticky top-0 z-50 flex flex-wrap items-center justify-between w-full py-4 md:py-1.5 px-4 text-lg text-gray-700 antialiased bg-gradient-to-r from-[#614385] to-[#516395]">
+            <div>
+                <a href="#section2" data-target="section2" class="font-[700] text-white navbar-custom-links"> BHUPENDRA.
+                </a>
+            </div>
+
+            <img src="./assets/images/icons/menu-icon.svg" id="menu-button"
+                class="h-6 w-6 cursor-pointer md:hidden block" alt="" />
+
+            <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
+                <ul class="pt-4 text-base text-white md:flex md:justify-between md:pt-0">
+                    <li>
+                        <a id="link-section1" data-target="section1"
+                            class="md:p-4 py-3 ps-4 block hover:text-[#009FC2] navbar-custom-links"
+                            href="#section1">Home</a>
+                    </li>
+                    <li>
+                        <a id="link-section2" data-target="section2"
+                            class="md:p-4 py-3 ps-4 block hover:text-[#009FC2] navbar-custom-links"
+                            href="#section2">About</a>
+                    </li>
+                    <li>
+                        <a id="link-section3" data-target="section3"
+                            class="md:p-4 py-3 ps-4 block hover:text-[#009FC2] navbar-custom-links"
+                            href="#section3">Skills</a>
+                    </li>
+                    <li>
+                        <a id="link-section4" data-target="section4"
+                            class="md:p-4 py-3 ps-4 block hover:text-[#009FC2] navbar-custom-links"
+                            href="#section4">Projects</a>
+                    </li>
+                    <li>
+                        <a id="link-section5" data-target="section5"
+                            class="md:p-4 py-3 ps-4 block hover:text-[#009FC2] navbar-custom-links"
+                            href="#section5">Experience</a>
+                    </li>
+                    <li>
+                        <a id="link-section6" data-target="section6"
+                            class="md:p-4 py-3 ps-4 block hover:text-[#009FC2] navbar-custom-links"
+                            href="#section6">Education</a>
+                    </li>
+                    <li>
+                        <a id="link-section7" data-target="section7"
+                            class="md:p-4 py-3 ps-4 block hover:text-[#009FC2] navbar-custom-links"
+                            href="#section7">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="section1"
+        class="relative text-white h-screen flex items-center justify-center py-60 md:py-28 lg:py-72">
+        <!-- Background Gradient -->
+        <div
+            class="absolute inset-0 bg-gradient-to-r shadow-2xl shadow-gray-600 from-[#614385] to-[#516395] opacity-100">
+        </div>
+
+        <!-- Hero Content -->
+        <div class="container mx-auto px-6 lg:px-20 relative z-10">
+            <div class="lg:flex items-center justify-between">
+                <!-- Text Content -->
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <h1 class="text-3xl md:text-5xl xl:text-6xl font-extrabold leading-tight mb-6">
+                        Hello, I’m <span class="text-[#009FC2]">Bhupendra</span><br />
+                    </h1>
+                    <p class="text-sm md:text-base xl:text-lg text-gray-300 mb-8">
+                        I am a passionate BTech student with expertise in Python, Django, PHP, and Laravel, among
+                        other technologies. I thrive on solving complex problems, building efficient web applications,
+                        and continuously learning new tools and frameworks. With a strong foundation in full-stack
+                        development, I am eager to contribute my skills to innovative projects and make a meaningful
+                        impact.
+                    </p>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                        <a href="javascript:void(0);" data-target="section4"
+                            class="px-6 py-3 bg-[#009FC2] text-white text-base md:text-lg font-medium rounded-lg shadow-md hover:bg-[#007ea6] navbar-custom-links">
+                            View My Work
+                        </a>
+                        <a href="javascript:void(0);" data-target="section7"
+                            class="px-6 py-3 border border-[#009FC2] text-base md:text-lg font-medium rounded-lg text-[#009FC2] hover:bg-[#007ea6] hover:text-white navbar-custom-links">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="lg:w-1/2 mt-10 lg:mt-0 hidden justify-center lg:flex">
+                    <img src="./assets/images/profile.png" alt="Image"
+                        class="w-3/4 sm:w-2/3 lg:w-full max-w-sm md:max-w-md rounded-lg object-cover" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="section2" class="py-12 mb-10 md:mb-24 text-black">
+        <div class="container mx-auto px-4 lg:flex lg:items-center lg:justify-between">
+            <!-- Image -->
+            <div class="lg:w-2/6 mb-6 lg:mb-0 mx-auto">
+                <div class="card shadow-2xl">
+                    <button class="mail">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-mail">
+                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                    </button>
+                    <div class="profile-pic">
+                        <img src="./assets/images/profile-image1.png" alt="About Me"
+                            class="w-auto h-auto rounded-3xl shadow-lg object-cover" />
+                    </div>
+                    <div class="bottom">
+                        <div class="content">
+                            <span class="name">Bhupendra Singh</span>
+                            <span class="about-me">Python, Django, Laravel Developer...
+                            </span>
+                        </div>
+                        <div class="bottom-bottom">
+                            <div class="social-links-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15.999"
+                                    viewBox="0 0 16 15.999">
+                                    <path id="Subtraction_4" data-name="Subtraction 4"
+                                        d="M6-582H-2a4,4,0,0,1-4-4v-8a4,4,0,0,1,4-4H6a4,4,0,0,1,4,4v8A4,4,0,0,1,6-582ZM2-594a4,4,0,0,0-4,4,4,4,0,0,0,4,4,4,4,0,0,0,4-4A4.005,4.005,0,0,0,2-594Zm4.5-2a1,1,0,0,0-1,1,1,1,0,0,0,1,1,1,1,0,0,0,1-1A1,1,0,0,0,6.5-596ZM2-587.5A2.5,2.5,0,0,1-.5-590,2.5,2.5,0,0,1,2-592.5,2.5,2.5,0,0,1,4.5-590,2.5,2.5,0,0,1,2-587.5Z"
+                                        transform="translate(6 598)"></path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                                    </path>
+                                </svg>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                                    <path
+                                        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <button class="button">Contact Me</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="lg:w-4/6 lg:pl-8">
+                <h2 class="text-4xl font-bold mb-4">About Me</h2>
+                <p class="text-lg leading-7 text-black mb-4">
+                    Hello! I'm Bhupendra, a passionate web developer committed to crafting stunning, functional, and
+                    user-friendly digital solutions. I specialize in combining innovation with meticulous attention to
+                    detail to deliver exceptional experiences that captivate users and exceed expectations. From
+                    designing sleek and intuitive interfaces to writing clean, efficient code and optimizing
+                    performance, I bring creativity and technical expertise to every project.
+                </p>
+                <p class="text-lg leading-7 text-black mb-6">
+                    I thrive on solving
+                    complex challenges, turning ideas into reality, and ensuring each product is as impactful as it is
+                    engaging. Let's create something extraordinary together!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="section3" class="py-12 mb-10 md:mb-24 text-black">
+        <div class="container mx-auto px-4 lg:items-center lg:justify-between">
+            <!-- Skills Content -->
+            <div class="lg:w-6/6">
+                <h2 class="text-4xl font-bold mb-4 text-center text-gray-800">
+                    My Skills
+                </h2>
+                <p class="text-lg leading-7 text-black mb-12 text-center px-2 xl:px-64 lg:px-48">
+                    With a diverse set of technical skills and a passion for continuous
+                    learning, I specialize in crafting web experiences that are both
+                    aesthetically pleasing and highly functional. Below are some of the
+                    technologies I excel at:
+                </p>
+
+                <!-- Skill Set -->
+                <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-8">
+                    <!-- Skill Item -->
+                    <div
+                        class="skill-item bg-white shadow-lg rounded-lg p-6 transition-all flex items-center justify-center">
+                        <div class="text-center mr-6">
+                            <img src="./assets/images/skills/html.svg" alt="HTML" class="w-16 h-16 mx-auto mb-4" />
+                            <h3 class="text-xl font-semibold mb-2">HTML</h3>
+                            <p class="text-sm text-gray-500 mb-4">Structure of websites</p>
+                        </div>
+                        <div class="progress-bar relative w-full h-2 bg-gray-300 rounded-full overflow-hidden">
+                            <div class="progress w-0 h-full bg-[#614385] rounded-full transition-all"
+                                data-width="91.6%"></div>
+                        </div>
+                        <div class="text-center ms-4">
+                            <p class="text-black">91.6%</p>
+                        </div>
+                    </div>
+
+                    <!-- Skill Item -->
+                    <div
+                        class="skill-item bg-white shadow-lg rounded-lg p-6 transition-all flex items-center justify-center">
+                        <div class="text-center mr-6">
+                            <img src="./assets/images/skills/css.svg" alt="CSS" class="w-16 h-16 mx-auto mb-4" />
+                            <h3 class="text-xl font-semibold mb-2">CSS</h3>
+                            <p class="text-sm text-gray-500 mb-4">Styling & Layout</p>
+                        </div>
+                        <div class="progress-bar relative w-full h-2 bg-gray-300 rounded-full overflow-hidden">
+                            <div class="progress w-0 h-full bg-[#614385] rounded-full transition-all" data-width="80%">
+                            </div>
+                        </div>
+                        <div class="text-center ms-4">
+                            <p class="text-black">80%</p>
+                        </div>
+                    </div>
+
+                    <!-- Skill Item -->
+                    <div
+                        class="skill-item bg-white shadow-lg rounded-lg p-6 transition-all flex items-center justify-center">
+                        <div class="text-center mr-6">
+                            <img src="./assets/images/skills/js.svg" alt="JavaScript" class="w-16 h-16 mx-auto mb-4" />
+                            <h3 class="text-xl font-semibold mb-2">JavaScript</h3>
+                            <p class="text-sm text-gray-500 mb-4">Client-Side Scripting</p>
+                        </div>
+                        <div class="progress-bar relative w-full h-2 bg-gray-300 rounded-full overflow-hidden">
+                            <div class="progress w-0 h-full bg-[#614385] rounded-full transition-all" data-width="80%">
+                            </div>
+                        </div>
+                        <div class="text-center ms-4">
+                            <p class="text-black">80%</p>
+                        </div>
+                    </div>
+
+                    <!-- Skill Item -->
+                    <div
+                        class="skill-item bg-white shadow-lg rounded-lg p-6 transition-all flex items-center justify-center">
+                        <div class="text-center mr-6">
+                            <img src="./assets/images/skills/react.svg" alt="React" class="w-16 h-16 mx-auto mb-4" />
+                            <h3 class="text-xl font-semibold mb-2">React</h3>
+                            <p class="text-sm text-gray-500 mb-4">Frontend Framework</p>
+                        </div>
+                        <div class="progress-bar relative w-full h-2 bg-gray-300 rounded-full overflow-hidden">
+                            <div class="progress w-0 h-full bg-[#614385] rounded-full transition-all" data-width="30%">
+                            </div>
+                        </div>
+                        <div class="text-center ms-4">
+                            <p class="text-black">30%</p>
+                        </div>
+                    </div>
+
+                    <!-- Skill Item -->
+                    <div
+                        class="skill-item bg-white shadow-lg rounded-lg p-6 transition-all flex items-center justify-center">
+                        <div class="text-center mr-6">
+                            <img src="./assets/images/skills/python.svg" alt="Python" class="w-16 h-16 mx-auto mb-4" />
+                            <h3 class="text-xl font-semibold mb-2">Python</h3>
+                            <p class="text-sm text-gray-500 mb-4">Backend Development</p>
+                        </div>
+                        <div class="progress-bar relative w-full h-2 bg-gray-300 rounded-full overflow-hidden">
+                            <div class="progress w-0 h-full bg-[#614385] rounded-full transition-all" data-width="90%">
+                            </div>
+                        </div>
+                        <div class="text-center ms-4">
+                            <p class="text-black">90%</p>
+                        </div>
+                    </div>
+
+                    <!-- Skill Item -->
+                    <div
+                        class="skill-item bg-white shadow-lg rounded-lg p-6 transition-all flex items-center justify-center">
+                        <div class="text-center mr-6">
+                            <img src="./assets/images/skills/sql.svg" alt="MySQL" class="w-16 h-16 mx-auto mb-4" />
+                            <h3 class="text-xl font-semibold mb-2">MySQL</h3>
+                            <p class="text-sm text-gray-500 mb-4">Database Management</p>
+                        </div>
+                        <div class="progress-bar relative w-full h-2 bg-gray-300 rounded-full overflow-hidden">
+                            <div class="progress w-0 h-full bg-[#614385] rounded-full transition-all" data-width="70%">
+                            </div>
+                        </div>
+                        <div class="text-center ms-4">
+                            <p class="text-black">70%</p>
+                        </div>
+                    </div>
+
+                    <!-- Skill Item -->
+                    <div
+                        class="skill-item bg-white shadow-lg rounded-lg p-6 transition-all flex items-center justify-center">
+                        <div class="text-center mr-6">
+                            <img src="./assets/images/skills/sql.svg" alt="SQL" class="w-16 h-16 mx-auto mb-4" />
+                            <h3 class="text-xl font-semibold mb-2">SQL</h3>
+                            <p class="text-sm text-gray-500 mb-4">
+                                Structured Query Language
+                            </p>
+                        </div>
+                        <div class="progress-bar relative w-full h-2 bg-gray-300 rounded-full overflow-hidden">
+                            <div class="progress w-0 h-full bg-[#614385] rounded-full transition-all" data-width="70%">
+                            </div>
+                        </div>
+                        <div class="text-center ms-4">
+                            <p class="text-black">70%</p>
+                        </div>
+                    </div>
+
+                    <!-- Skill Item -->
+                    <div
+                        class="skill-item bg-white shadow-lg rounded-lg p-6 transition-all flex items-center justify-center">
+                        <div class="text-center mr-6">
+                            <img src="./assets/images/skills/django.svg" alt="Django" class="w-16 h-16 mx-auto mb-4" />
+                            <h3 class="text-xl font-semibold mb-2">Django</h3>
+                            <p class="text-sm text-gray-500 mb-4">Web Framework (Python)</p>
+                        </div>
+                        <div class="progress-bar relative w-full h-2 bg-gray-300 rounded-full overflow-hidden">
+                            <div class="progress w-0 h-full bg-[#614385] rounded-full transition-all" data-width="90%">
+                            </div>
+                        </div>
+                        <div class="text-center ms-4">
+                            <p class="text-black">90%</p>
+                        </div>
+                    </div>
+
+                    <!-- Skill Item -->
+                    <div
+                        class="skill-item bg-white shadow-lg rounded-lg p-6 transition-all flex items-center justify-center">
+                        <div class="text-center mr-6">
+                            <img src="./assets/images/skills/c.svg" alt="C Language" class="w-16 h-16 mx-auto mb-4" />
+                            <h3 class="text-xl font-semibold mb-2">C Language</h3>
+                            <p class="text-sm text-gray-500 mb-4">C Programming Language</p>
+                        </div>
+                        <div class="progress-bar relative w-full h-2 bg-gray-300 rounded-full overflow-hidden">
+                            <div class="progress w-0 h-full bg-[#614385] rounded-full transition-all" data-width="90%">
+                            </div>
+                        </div>
+                        <div class="text-center ms-4">
+                            <p class="text-black">90%</p>
+                        </div>
+                    </div>
+                    <!-- Skill Item -->
+                    <div
+                        class="skill-item bg-white shadow-lg rounded-lg p-6 transition-all flex items-center justify-center">
+                        <div class="text-center mr-6">
+                            <img src="./assets/images/skills/c++.svg" alt="C++ Language"
+                                class="w-16 h-16 mx-auto mb-4" />
+                            <h3 class="text-xl font-semibold mb-2">
+                                C++ Programming Language
+                            </h3>
+                            <p class="text-sm text-gray-500 mb-4">
+                                C++ Programming Language
+                            </p>
+                        </div>
+                        <div class="progress-bar relative w-full h-2 bg-gray-300 rounded-full overflow-hidden">
+                            <div class="progress w-0 h-full bg-[#614385] rounded-full transition-all" data-width="80%">
+                            </div>
+                        </div>
+                        <div class="text-center ms-4">
+                            <p class="text-black">80%</p>
+                        </div>
+                    </div>
+                    <!-- Skill Item -->
+                    <div
+                        class="skill-item bg-white shadow-lg rounded-lg p-6 transition-all flex items-center justify-center">
+                        <div class="text-center mr-6">
+                            <img src="./assets/images/skills/php.svg" alt="C Language" class="w-16 h-16 mx-auto mb-4" />
+                            <h3 class="text-xl font-semibold mb-2">PHP</h3>
+                            <p class="text-sm text-gray-500 mb-4">Web Language</p>
+                        </div>
+                        <div class="progress-bar relative w-full h-2 bg-gray-300 rounded-full overflow-hidden">
+                            <div class="progress w-0 h-full bg-[#614385] rounded-full transition-all" data-width="80%">
+                            </div>
+                        </div>
+                        <div class="text-center ms-4">
+                            <p class="text-black">80%</p>
+                        </div>
+                    </div>
+                    <!-- Skill Item -->
+                    <div
+                        class="skill-item bg-white shadow-lg rounded-lg p-6 transition-all flex items-center justify-center">
+                        <div class="text-center mr-6">
+                            <img src="./assets/images/skills/bootstrap.svg" alt="bootstrap"
+                                class="w-16 h-16 mx-auto mb-4" />
+                            <h3 class="text-xl font-semibold mb-2">Bootstrap</h3>
+                            <p class="text-sm text-gray-500 mb-4">Frontend Web Framework</p>
+                        </div>
+                        <div class="progress-bar relative w-full h-2 bg-gray-300 rounded-full overflow-hidden">
+                            <div class="progress w-0 h-full bg-[#614385] rounded-full transition-all" data-width="80%">
+                            </div>
+                        </div>
+                        <div class="text-center ms-4">
+                            <p class="text-black">80%</p>
+                        </div>
+                    </div>
+                    <!-- Skill Item -->
+                    <div
+                        class="skill-item bg-white shadow-lg rounded-lg p-6 transition-all flex items-center justify-center">
+                        <div class="text-center mr-6">
+                            <img src="./assets/images/skills/tailwind-css.svg" alt="tailwind"
+                                class="w-16 h-16 mx-auto mb-4" />
+                            <h3 class="text-xl font-semibold mb-2">Tailwind CSS</h3>
+                            <p class="text-sm text-gray-500 mb-4">Frontend web Framework</p>
+                        </div>
+                        <div class="progress-bar relative w-full h-2 bg-gray-300 rounded-full overflow-hidden">
+                            <div class="progress w-0 h-full bg-[#614385] rounded-full transition-all" data-width="60%">
+                            </div>
+                        </div>
+                        <div class="text-center ms-4">
+                            <p class="text-black">60%</p>
+                        </div>
+                    </div>
+                    <!-- Skill Item -->
+                    <div
+                        class="skill-item bg-white shadow-lg rounded-lg p-6 transition-all flex items-center justify-center">
+                        <div class="text-center mr-6">
+                            <img src="./assets/images/skills/laravel.svg" alt="laravel"
+                                class="w-16 h-16 mx-auto mb-4" />
+                            <h3 class="text-xl font-semibold mb-2">Laravel</h3>
+                            <p class="text-sm text-gray-500 mb-4">Web Framework (PHP)</p>
+                        </div>
+                        <div class="progress-bar relative w-full h-2 bg-gray-300 rounded-full overflow-hidden">
+                            <div class="progress w-0 h-full bg-[#614385] rounded-full transition-all" data-width="80%">
+                            </div>
+                        </div>
+                        <div class="text-center ms-4">
+                            <p class="text-black">80%</p>
+                        </div>
+                    </div>
+                    <!-- Skill Item -->
+                    <div
+                        class="skill-item bg-white shadow-lg rounded-lg p-6 transition-all flex items-center justify-center">
+                        <div class="text-center mr-6">
+                            <img src="./assets/images/skills/jquery.svg" alt="jquery" class="w-16 h-16 mx-auto mb-4" />
+                            <h3 class="text-xl font-semibold mb-2">JQuery</h3>
+                            <p class="text-sm text-gray-500 mb-4">JavaScript Library</p>
+                        </div>
+                        <div class="progress-bar relative w-full h-2 bg-gray-300 rounded-full overflow-hidden">
+                            <div class="progress w-0 h-full bg-[#614385] rounded-full transition-all" data-width="90%">
+                            </div>
+                        </div>
+                        <div class="text-center ms-4">
+                            <p class="text-black">90%</p>
+                        </div>
+                    </div>
+                    <!-- Skill Item -->
+                    <div
+                        class="skill-item bg-white shadow-lg rounded-lg p-6 transition-all flex items-center justify-center">
+                        <div class="text-center mr-6">
+                            <img src="./assets/images/skills/bootstrap.svg" alt="react bootstrap"
+                                class="w-16 h-16 mx-auto mb-4" />
+                            <h3 class="text-xl font-semibold mb-2">React Bootstrap</h3>
+                            <p class="text-sm text-gray-500 mb-4">
+                                Frontend web Framework (For React)
+                            </p>
+                        </div>
+                        <div class="progress-bar relative w-full h-2 bg-gray-300 rounded-full overflow-hidden">
+                            <div class="progress w-0 h-full bg-[#614385] rounded-full transition-all" data-width="30%">
+                            </div>
+                        </div>
+                        <div class="text-center ms-4">
+                            <p class="text-black">30%</p>
+                        </div>
+                    </div>
+                    <!-- Skill Item -->
+                    <div
+                        class="skill-item bg-white shadow-lg rounded-lg p-6 transition-all flex items-center justify-center">
+                        <div class="text-center mr-6">
+                            <img src="./assets/images/skills/flutter.svg" alt="flutter"
+                                class="w-16 h-16 mx-auto mb-4" />
+                            <h3 class="text-xl font-semibold mb-2">Flutter</h3>
+                            <p class="text-sm text-gray-500 mb-4">C Programming Language</p>
+                        </div>
+                        <div class="progress-bar relative w-full h-2 bg-gray-300 rounded-full overflow-hidden">
+                            <div class="progress w-0 h-full bg-[#614385] rounded-full transition-all" data-width="50%">
+                            </div>
+                        </div>
+                        <div class="text-center ms-4">
+                            <p class="text-black">50%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section4" class="py-12 mb-10 md:mb-24 text-black">
+        <div class="container mx-auto px-4 lg:items-center lg:justify-between">
+            <!-- projects Content -->
+            <div class="lg:w-6/6">
+                <h2 class="text-4xl font-bold mb-4 text-center text-gray-800">
+                    My Projects
+                </h2>
+                <p class="text-lg leading-7 text-black mb-12 text-center px-2 xl:px-64 lg:px-48">
+                    With a diverse set of technical skills and a passion for continuous
+                    learning, I specialize in crafting web experiences that are both
+                    aesthetically pleasing and highly functional. Below are some of the
+                    technologies I excel at:
+                </p>
+
+                <!-- Project Set -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 p-4">
+                    <!-- Project Item -->
+                    <div
+                        class="skill-item shadow-xl rounded-lg p-3 md:p-6 lg:p-10 bg-gradient-to-r from-[#614385] to-[#516395] text-white">
+                        <div class="flex flex-col items-center lg:items-start">
+                            <!-- Image -->
+                            <div class="w-full mb-6">
+                                <img src="./assets/images/projects/face-recognition.jpg" alt="Project Image"
+                                    class="w-full h-[400px] object-cover rounded-lg shadow-md" />
+                            </div>
+
+                            <!-- Content -->
+                            <div class="text-start w-full">
+                                <h3 class="text-2xl font-semibold mb-2">Face Recognition Attendance App</h3>
+                                <h5 class="text-gray-200 font-normal mb-2">Using Python</h5>
+                                <p class="text-lg mb-4">This project demonstrates the use of gradient backgrounds,
+                                    advanced layouts, and hover effects to create visually appealing and interactive
+                                    elements.</p>
+                                <a href="javascript:void(0)" class="text-blue-400 hover:underline font-semibold">Learn
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Item -->
+                    <div
+                        class="skill-item shadow-xl rounded-lg p-3 md:p-6 lg:p-10 bg-gradient-to-r from-[#614385] to-[#516395] text-white">
+                        <div class="flex flex-col items-center lg:items-start">
+                            <!-- Image -->
+                            <div class="w-full mb-6">
+                                <img src="./assets/images/projects/v-keyboard.jpg" alt="Project Image"
+                                    class="w-full h-[400px] object-cover rounded-lg shadow-md" />
+                            </div>
+
+                            <!-- Content -->
+                            <div class="text-start w-full">
+                                <h3 class="text-2xl font-semibold mb-2">Virtual Keyboard</h3>
+                                <h5 class="text-gray-200 font-normal mb-2">Using Python</h5>
+                                <p class="text-lg mb-4">This project demonstrates the use of gradient backgrounds,
+                                    advanced layouts, and hover effects to create visually appealing and interactive
+                                    elements.</p>
+                                <a href="javascript:void(0)" class="text-blue-400 hover:underline font-semibold">Learn
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Item -->
+                    <div
+                        class="skill-item shadow-xl rounded-lg p-3 md:p-6 lg:p-10 bg-gradient-to-r from-[#614385] to-[#516395] text-white">
+                        <div class="flex flex-col items-center lg:items-start">
+                            <!-- Image -->
+                            <div class="w-full mb-6">
+                                <img src="./assets/images/projects/face-recognition.jpg" alt="Project Image"
+                                    class="w-full h-[400px] object-cover rounded-lg shadow-md" />
+                            </div>
+
+                            <!-- Content -->
+                            <div class="text-start w-full">
+                                <h3 class="text-2xl font-semibold mb-2">Face Recognition Attendance App</h3>
+                                <h5 class="text-gray-200 font-normal mb-2">Using Python</h5>
+                                <p class="text-lg mb-4">This project demonstrates the use of gradient backgrounds,
+                                    advanced layouts, and hover effects to create visually appealing and interactive
+                                    elements.</p>
+                                <a href="javascript:void(0)" class="text-blue-400 hover:underline font-semibold">Learn
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Item -->
+                    <div
+                        class="skill-item shadow-xl rounded-lg p-3 md:p-6 lg:p-10 bg-gradient-to-r from-[#614385] to-[#516395] text-white">
+                        <div class="flex flex-col items-center lg:items-start">
+                            <!-- Image -->
+                            <div class="w-full mb-6">
+                                <img src="./assets/images/projects/face-recognition.jpg" alt="Project Image"
+                                    class="w-full h-[400px] object-cover rounded-lg shadow-md" />
+                            </div>
+
+                            <!-- Content -->
+                            <div class="text-start w-full">
+                                <h3 class="text-2xl font-semibold mb-2">Face Recognition Attendance App</h3>
+                                <h5 class="text-gray-200 font-normal mb-2">Using Python</h5>
+                                <p class="text-lg mb-4">This project demonstrates the use of gradient backgrounds,
+                                    advanced layouts, and hover effects to create visually appealing and interactive
+                                    elements.</p>
+                                <a href="javascript:void(0)" class="text-blue-400 hover:underline font-semibold">Learn
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--- Experience Section-->
+    <section id="section5" class="py-12 mb-10 md:mb-24">
+        <div class="container mx-auto px-6 md:px-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-8">Experience</h2>
+            <div class="relative">
+                <!-- Centered Timeline -->
+                <div
+                    class="border-l-2 border-[#516395] absolute left-1/2 transform -translate-x-1/2 h-full lg:block hidden">
+                </div>
+                <div class="border-l-2 border-[#516395] absolute -left-1 h-full block lg:hidden"></div>
+                <!-- Timeline Items -->
+                <div class="space-y-10">
+
+                    <!-- Experience Item -->
+                    <div class="relative flex lg:justify-start lg:flex-row flex-col items-end lg:items-center">
+                        <div class="lg:w-1/2 lg:pr-8 w-full">
+                            <div class="bg-white p-6 text-end shadow-lg rounded-lg hover:transform hover:scale-[1.015]">
+                                <h3 class="text-xl font-semibold text-gray-800">Backend Developer</h3>
+                                <span class="text-sm text-gray-500">September 2024 - December 2024</span>
+                                <p class="mt-2 text-gray-600">I worked as a backend developer at <a target="_blank"
+                                        href="https://digitaladdworld.in/"
+                                        class="text-[#614385] font-bold italic hover:underline">DigitaladdworldTech</a>,
+                                    specializing in Python, Django, and Laravel. My responsibilities included designing
+                                    RESTful APIs, developing scalable server-side logic, and ensuring efficient database
+                                    management. I collaborated with cross-functional teams to integrate front-end
+                                    features and implemented secure authentication systems. Additionally, I optimized
+                                    application performance and resolved critical backend issues in production.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute w-6 h-6 bg-[#614385] rounded-full left-1/2 transform -translate-x-1/2 border-4 border-white hidden lg:block">
+                        </div>
+                        <div
+                            class="absolute w-6 h-6 bg-[#614385] rounded-full -left-1 transform -translate-x-1/2 border-2 border-white block lg:hidden">
+                        </div>
+                    </div>
+                    <!-- Experience Item -->
+                    <div class="relative flex lg:justify-end lg:flex-row flex-col items-end lg:items-center">
+                        <div class="lg:w-1/2 lg:pl-8 lg:text-right w-full">
+                            <div
+                                class="bg-white p-6 text-start shadow-lg rounded-lg hover:transform hover:scale-[1.015]">
+                                <h3 class="text-xl font-semibold text-gray-800">Backend Developer</h3>
+                                <span class="text-sm text-gray-500">March 2024 - September 2024</span>
+                                <p class="mt-2 text-gray-600">I worked as a backend developer at <a target="_blank"
+                                        class="text-[#614385] font-bold italic hover:underline"
+                                        href="https://www.w3care.com/">W3care
+                                        Technologies Pvt. Ltd.</a>, where I
+                                    designed and implemented scalable APIs and optimized database queries to enhance
+                                    application performance. I collaborated with front-end developers to ensure seamless
+                                    data integration and maintained secure user authentication systems. My role also
+                                    involved debugging complex server-side issues and deploying solutions to production.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute w-6 h-6 bg-[#614385] rounded-full left-1/2 transform -translate-x-1/2 border-4 border-white hidden lg:block">
+                        </div>
+                        <div
+                            class="absolute w-6 h-6 bg-[#614385] rounded-full -left-1 transform -translate-x-1/2 border-4 border-white block lg:hidden">
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="section6" class="cd-horizontal-timeline py-10 mb-10 md:mb-24">
+        <div class="py-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-8">Education</h1>
+        </div>
+        <div class="timeline">
+            <div class="events-wrapper">
+                <div class="events">
+                    <ol>
+                        <li><a href="javascript:void(0)" data-date="14/05/2018" class="selected">10<sup>th</sup></a>
+                        </li>
+                        <li><a href="javascript:void(0)" data-date="14/05/2020">12<sup>th</sup></a></li>
+                        <li><a href="javascript:void(0)" data-date="21/05/2022">Graduation</a></li>
+                    </ol>
+
+                    <span class="filling-line" aria-hidden="true"></span>
+                </div> <!-- .events -->
+            </div> <!-- .events-wrapper -->
+
+            <ul class="cd-timeline-navigation">
+                <li><a href="javascript:void(0)" class="prev inactive"></a>
+                </li>
+                <li><a href="javascript:void(0)" class="next"></a></li>
+            </ul> <!-- .cd-timeline-navigation -->
+        </div> <!-- .timeline -->
+
+        <div class="events-content">
+            <ol>
+                <li class="selected" data-date="14/05/2018">
+                    <div class="pb-20 px-4">
+                        <div
+                            class="bg-gradient-to-r from-[#614385] to-[#516395] py-6 px-4 text-white shadow-2xl rounded-2xl">
+                            <h3 class="text-2xl">Matriculation (10<sup>th</sup>)</h3>
+                            <em>(2017-2018)</em>
+                            <p class="text-white">
+                                Army Public School, Jaipur
+                            </p>
+                            <p class="text-white">
+                                72%
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li data-date="14/05/2020">
+                    <div class="pb-20 px-4">
+                        <div
+                            class="bg-gradient-to-r from-[#614385] to-[#516395] py-6 px-4 text-white shadow-2xl rounded-2xl">
+                            <h3 class="text-2xl">Senior Secondary (12<sup>th</sup>) PCM</h3>
+                            <em>(2019-2020)</em>
+                            <p class="text-white">
+                                Tagore Public School Vaishali Nagar, Jaipur
+                            </p>
+                            <p class="text-white">
+                                63%
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li data-date="21/05/2022">
+                    <div class="pb-20 px-4">
+                        <div
+                            class="bg-gradient-to-r from-[#614385] to-[#516395] py-6 px-4 text-white shadow-2xl rounded-2xl">
+                            <h3 class="text-2xl">B.Tech (Computer Science)</h3>
+                            <em>(2020-2024)</em>
+                            <p class="text-white">
+                                Vivekananda Global University, Jaipur
+                            </p>
+                            <div class="py-3"></div>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div> <!-- .events-content -->
+    </section>
+
+    <!-- Contact section -->
+    <section id="section7" class="py-12 mb-10 md:mb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-10">Get in Touch</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Contact Info -->
+                <div
+                    class="flex flex-col justify-center bg-gradient-to-r from-[#614385] to-[#516395] text-white rounded-lg p-6 shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4">Contact Information</h3>
+                    <p class="mb-4">Feel free to reach out to me using the details below:</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <span
+                                class="w-8 h-8 flex justify-center items-center bg-white rounded-full text-[#516395] mr-4">
+                                <i class="fas fa-phone"></i>
+                            </span>
+                            <span>+123 456 7890</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span
+                                class="w-8 h-8 flex justify-center items-center bg-white rounded-full text-[#516395] mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <span>example@email.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span
+                                class="w-8 h-8 flex justify-center items-center bg-white rounded-full text-[#516395] mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </span>
+                            <span>123 Street, City, Country</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white rounded-lg p-6 shadow-lg">
+                    <form>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="flex flex-col">
+                                <label for="name" class="text-gray-700 font-medium mb-2">Name</label>
+                                <input type="text" id="name" name="name"
+                                    class="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#516395] focus:outline-none">
+                            </div>
+                            <div class="flex flex-col">
+                                <label for="email" class="text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email" name="email"
+                                    class="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#516395] focus:outline-none">
+                            </div>
+                        </div>
+                        <div class="flex flex-col mt-4">
+                            <label for="subject" class="text-gray-700 font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject"
+                                class="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#516395] focus:outline-none">
+                        </div>
+                        <div class="flex flex-col mt-4">
+                            <label for="message" class="text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5"
+                                class="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#516395] focus:outline-none"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="mt-6 bg-[#516395] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#614385] transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- footer Section -->
+    <footer class="bg-gradient-to-r from-[#614385] to-[#516395] text-white py-2">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Footer Brand -->
+                <div class="text-center md:text-left mb-6 md:mb-0">
+                    <h2 class="text-lg font-bold text-white">Bhupendra Singh</h2>
+                    <p class="text-sm text-white">Web Developer & Designer</p>
+                </div>
+
+                <!-- Navigation Links -->
+                <!-- <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#home" class="hover:text-blue-400">Home</a>
+                    <a href="#about" class="hover:text-blue-400">About</a>
+                    <a href="#projects-section" class="hover:text-blue-400">Projects</a>
+                    <a href="#contact" class="hover:text-blue-400">Contact</a>
+                </div> -->
+
+                <!-- Social Media Icons -->
+                <div class="flex space-x-4">
+                    <a href="javascript:void(0)" class="text-white hover:text-[#614385]"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="javascript:void(0)" class="text-white hover:text-[#614385]"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="javascript:void(0)" class="text-white hover:text-[#614385]"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="javascript:void(0)" class="text-white hover:text-[#614385]"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="text-center text-sm text-white mt-8">
+                &copy; <p class="inline" id="this-year-copy-right"></p> Bhupendra Singh. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="./assets/plugins/jquery/jquery-3.7.1.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
