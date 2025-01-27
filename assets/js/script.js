@@ -439,4 +439,90 @@ jQuery(document).ready(function ($) {
 $(document).ready(function () {
     const currentYear = new Date().getFullYear(); // Get the current year
     $("#this-year-copy-right").text(currentYear); // Set the year to the element
+
+
+    const $scrollToTop = $('#scrollToTop');
+
+    // Show or hide the button based on scroll position
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() > 600) {
+            $scrollToTop.addClass('show'); // Show the button when scrolled 600px
+        } else {
+            $scrollToTop.removeClass('show'); // Hide the button otherwise
+        }
+    });
+
+    // Smooth scroll to top when the button is clicked
+    $scrollToTop.on('click', function () {
+        $('html, body').animate({ scrollTop: 0 }, 600, function () {
+            $scrollToTop.removeClass('show'); // Ensure the button is hidden after reaching the top
+        });
+    });
 });
+
+
+$(document).ready(function () {
+    // Function to handle shadow toggling
+    function toggleNavShadow() {
+        // Check if section1 is in the viewport
+        const section1 = $('#section1');
+        const section1Top = section1.offset().top;
+        const section1Bottom = section1Top + section1.outerHeight();
+        const scrollPosition = $(window).scrollTop() + 100;
+        const windowHeight = $(window).height();
+
+        if (scrollPosition >= section1Top && scrollPosition < section1Bottom) {
+            // Section 1 is visible
+            $('nav').removeClass('shadow-2xl');
+        } else {
+            // Section 1 is not visible
+            $('nav').addClass('shadow-2xl');
+        }
+    }
+
+    // Initial call to set shadow based on the initial viewport
+    toggleNavShadow();
+
+    // Add scroll event listener
+    $(window).on('scroll', function () {
+        toggleNavShadow();
+    });
+});
+
+
+$(document).ready(function () {
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxVZhUTr4xoPX8eOWockI6j1YRysTGb5cXX1MJJ1RvQHx331rH1Ys2CtvZ_CpvFuDw/exec';
+
+    $("#contact-form").on("submit", function (e) {
+        e.preventDefault();
+
+        // Gather form data
+        const formData = {
+            name: $("#name").val(),
+            email: $("#email").val(),
+            subject: $("#subject").val(),
+            message: $("#message").val(),
+        };
+
+        // Submit to Google Sheets
+        $.ajax({
+            url: scriptURL,
+            method: "POST",
+            data: formData,
+            dataType: "application/json",
+            success: function (response) {
+                $("#contact-form")[0].reset();
+            },
+        });
+        $("#contact-form")[0].reset();
+        $('#alert').removeClass('hidden');
+        setTimeout(() => {
+            $('#alert').addClass('hidden');
+        }, 3000);
+    });
+});
+
+document.getElementById('close-alert').addEventListener('click', function () {
+    document.getElementById('alert').classList.add('hidden');
+});
+
